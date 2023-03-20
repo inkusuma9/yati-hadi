@@ -28,7 +28,7 @@ def form():
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login("inkusuma074@gmail.com", "gkjckurekvpgdade")
-    server.sendmail("inkusuma074@gmail.com", "innekecynthia51@gmail.com", message)
+    server.sendmail("inkusuma074@gmail.com", "nur.hadi7428@gmail.com", message)
     return render_template("form.html")
 
 if __name__ == "__main__":

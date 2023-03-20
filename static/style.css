@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
 :root{
    --green:#D7BE69;
    --white:#fff;
@@ -16,7 +20,7 @@
    outline: none; border:none;
    text-decoration: none;
    transition: .2s linear;
-   text-transform: capitalize;
+   text-transform: none;
 }
 
 *::selection{
@@ -222,11 +226,198 @@ section{
    
 }
 
+/* a */
+.inner-border {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.outer-border {
+  border: 2px solid #DE9B72;
+   height: 99%;
+   width: 98%;
+   padding: 6px;
+   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .outer-border {
+     height: 94%;
+  }
+}
+
+.mid-border {
+   border: 6px solid #DE9B72;
+   height: 100%;
+   width: 100%;
+   padding: 6px;
+   margin: auto;
+}
+
+/* .dark-background::before {
+   content: "";
+   background-image: url(../static/backgroud.png);
+   background-size: cover;
+   background-position: center top;
+   opacity: 0.5;
+   position: absolute;
+   z-index: -1;
+}
+
+.dark-background {
+   position: relative; 
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+} */
+
+
+
+/* .couple .dark-background::before {
+   /* background-color: rgba(0,0,0,0.25); */
+   /* background-color: rgba(152, 66, 211, 0.63);
+} */ */
+
+.couple .dark-background .inner-border {
+  position: relative;
+  border: 2px solid #DE9B72;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+
+/* Decorations */
+.corner-decoration {
+  position: absolute;
+  width: 3em;
+  margin: -3px;
+}
+
+@media (min-width: 768px) {
+  .corner-decoration {
+     width: 3.5em;
+       margin: -4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .corner-decoration {
+     width: 4em;
+       margin: -5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .corner-decoration {
+     width: 5em;
+       margin: -6px;
+  }
+}
+
+.couple .dark-background .corner-decoration.corner-left-top {
+  left: 0;
+  top: 0;
+}
+
+.couple .dark-background .corner-decoration.corner-right-top {
+  top: 0;
+  right: 0;
+   -webkit-transform: scaleX(-1);
+ transform: scaleX(-1);
+}
+
+.couple .dark-background .corner-decoration.corner-right-bottom {
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scale(-1);
+  transform: scale(-1);
+}
+
+.couple .dark-background .corner-decoration.corner-left-bottom {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+
+.couple .dark-background .vertical-decoration {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 11em;
+}
+
+
+@media (min-width: 768px) {
+  .vertical-decoration {
+     width: 16em;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .vertical-decoration {
+     width: 20em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vertical-decoration {
+     width: 27em;
+  }
+}
+
+.vertical-decoration.top {
+  top: 0;
+
+}
+
+.vertical-decoration.bottom {
+  bottom: 0;
+  -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}
+/* d */
+/* .couple {
+   position: relative;
+   display: flex;
+} */
+/* .dark-background::before {
+   content: "";
+   opacity: 0.6;
+   background-image: url(../static/backgroud.png);
+   background-position: center top;
+   background-size: cover;
+
+
+} */
+
+/* .dark-background::before {
+   position: relative;
+   justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+} */
+
+.couple .dark-background {
+   content: "";
+   background-image: url(../static/backgroud.png);
+   background-position: center top;
+   background-size: cover;
+}
 
 .couple .box-container h3{
    margin-bottom: 1rem;
    font-size: 3rem;
    color:var(--white);
+   color: rgba( 255, 255, 255, 1);
    line-height: 2;
    text-align: center;
 }
@@ -250,7 +441,7 @@ section{
 .couple .box-container h4{
    margin-bottom: 1rem;
    font-size: 5rem;
-   color:var(--green);
+   color: var(--green);
    line-height: 1;
    text-align: center;
 }
@@ -264,19 +455,19 @@ section{
 }
 
 
-.quotes{
+.couple .ayat{
    margin-top: 6rem;
    border-style: double;
-   border-color: #D7BE69;
+   border-color: #95690b;
 }
-.quotes p{
+.couple .ayat p{
    margin-bottom: 1rem;
    font-size: 2.5rem;
    color:var(--white);
    line-height: 1;
    text-align: center;
 }
-.quotes h2{
+.couple .ayat h2{
    margin-bottom: 1rem;
    font-size: 3rem;
    color:var(--green);
